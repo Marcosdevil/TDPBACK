@@ -13,6 +13,8 @@ app.use(bodyParser.json());
 
 app.use('/api', require('./routes/index'))
 
-
-app.listen(3000);
+const PORT = process.env.PORT || 3000
+app.listen(PORT, function(){
+    console.log('Servidor escuchando en el puerto', PORT);
+});
 console.log('Server on port' + 3000);;
